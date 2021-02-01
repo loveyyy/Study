@@ -1,7 +1,6 @@
 include irvine32.inc
 
 
-KEY = 129  ;1-255之前的任一值
 BUFMAX = 128
 .data
 sPrompt byte "输入需要加密的文本",0
@@ -9,6 +8,8 @@ sEncrypt byte "加密文本",0
 sDecrypt byte "解密文本",0
 buffer byte BUFMAX + 1 dup(0)
 bufSize dword ?
+KEY byte "ABXmv#7"
+KEYSize = ($ - KEY)
 
 .code
 	main proc
@@ -58,12 +59,22 @@ bufSize dword ?
 	;-----------------------------
 	translateBuffer proc
 	;字符串的每个字节与key进行异或
-	;
 		pushad
 		mov ecx,bufSize
 		mov esi,0
+		mov ebx,keySize
 	L1:
-		xor buffer[esi],KEY
+		mov eax,esi
+		.if esi == 0
+			mov edi,0
+		.elseif eax > ebx
+			div bl
+			movzx edi,ah
+		.else
+			mov edi,esi
+		.endif
+		movzx edx,KEY[edi]
+		xor buffer[esi],dl
 		inc esi
 		loop L1
 		popad
