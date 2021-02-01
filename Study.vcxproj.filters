@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <MASM Include="recoverString.asm">
+    <MASM Include="IrvineTest.asm">
       <Filter>源文件</Filter>
     </MASM>
   </ItemGroup>
