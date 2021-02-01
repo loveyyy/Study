@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <MASM Include="IrvineTest.asm">
+    <MASM Include="Encrypt.asm">
       <Filter>源文件</Filter>
     </MASM>
   </ItemGroup>
