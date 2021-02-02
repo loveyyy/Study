@@ -19,7 +19,10 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <MASM Include="StackFrament.asm" />
+    <MASM Include="ArraySum.asm" />
+    <MASM Include="DisplaySum.asm" />
+    <MASM Include="PromptForIntegers.asm" />
+    <MASM Include="StartUp.asm" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
