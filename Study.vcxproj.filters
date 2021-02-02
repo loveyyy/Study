@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <MASM Include="PINVaild.asm">
+    <MASM Include="ArrayFill.asm">
       <Filter>源文件</Filter>
     </MASM>
   </ItemGroup>
